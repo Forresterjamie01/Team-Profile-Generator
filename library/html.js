@@ -54,4 +54,13 @@ const renderIntern = intern => {
     return template;
 };
 
+const renderIndex = html => {
+    const template = fs.readFileSync(path.resolve(templatesDir, "index.html"), "utf8");
+    return replacePlaceholders(template, "team", html);
 
+    const replacePlaceholders = (template, placeholder, value) => {
+        const pattern = new RegExp("{{" + placeholder + "}}", "gm");
+
+    };
+}
+ module.exports = render 
